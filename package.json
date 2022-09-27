@@ -1,11 +1,11 @@
 {
-  "name": "@dswhitely1/create-react-project",
-  "version": "1.0.2",
+  "name": "@aemre/create-next-project",
+  "version": "1.0.0",
   "description": "Project Generation for React",
   "main": "src/index.js",
   "bin": {
-    "@dswhitely1/create-react-project": "bin/create-react-project",
-    "create-react-project": "bin/create-react-project"
+    "@aemre/create-next-project": "bin/create-next-project",
+    "create-next-project": "bin/create-next-project"
   },
   "publishConfig": {
     "access": "public"
@@ -15,9 +15,9 @@
   },
   "keywords": [
     "cli",
-    "create-react-project"
+    "create-next-project"
   ],
-  "author": "Donald Whitely <dswhitely1@gmail.com> (https://www.donwhitely.com/)",
+  "author": "Emre INEL",
   "license": "MIT",
   "dependencies": {
     "arg": "^4.1.3",

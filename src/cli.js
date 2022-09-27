@@ -25,7 +25,7 @@ async function getConfig(rawArgs) {
         name: 'pkgMgr',
         message: 'Which Package Manager to Use',
         choices: ['NPM', 'Yarn'],
-        default: 'Yarn'
+        default: 'NPM'
     })
     // Project Name
     if (!options.directory) {
@@ -41,7 +41,7 @@ async function getConfig(rawArgs) {
             name: 'typescript',
             type: 'confirm',
             message: 'Enable TypeScript',
-            default: false
+            default: true
         })
     }
 
@@ -50,24 +50,15 @@ async function getConfig(rawArgs) {
             name: 'git',
             type: 'confirm',
             message: 'Enable Git',
-            default: false
+            default: true
         })
     }
 
-    if (!options.redux) {
+    if (!options.reduxToolkit) {
         questions.push({
-            name: 'redux',
+            name: 'reduxToolkit',
             type: 'confirm',
-            message: 'Enable Redux',
-            default: false
-        })
-    }
-
-    if (!options.reactRouter) {
-        questions.push({
-            name: 'reactRouter',
-            type: 'confirm',
-            message: 'Enable React Router',
+            message: 'Enable Redux Toolkit',
             default: false
         })
     }
@@ -79,8 +70,7 @@ async function getConfig(rawArgs) {
         directory: options.directory || answers.directory,
         typescript: options.typescript || answers.typescript,
         git: options.git || answers.git,
-        redux: options.redux || answers.redux,
-        reactRouter: options.reactRouter || answers.reactRouter
+        reduxToolkit: options.reduxToolkit || answers.reduxToolkit,
     }
 }
 
